@@ -6,7 +6,6 @@ Unidas busca crear difusión y memoria colectiva sobre temas de violencia físic
 Buscamos implementar un mapa interactivo donde se pueda observar el índice de estos crímenes por estado.
 Además, consideramos que sus casos no deben ser tratados solo como datos y estadísticas, queremos que sus historias
 sean contadas y recordadas sin caer en la revictimización. 
-
 Por último, identificaremos los factores de riesgo en diferentes ámbitos.
 
 -------------------------------------------------------------------------------------------------------------------------------
