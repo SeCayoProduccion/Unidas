@@ -17,3 +17,12 @@ Unidas Unidas aims to raise awareness and collective memory on issues of physica
 
 We seek to implement an interactive map that displays the rate of these crimes by state. Additionally, we believe they should not be treated merely as data and statistics; we want their stories to be told and not forgotten, without revictimizing them. Finally, we will attempt to identify the risk factors in different areas.
 
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+## Integrantes
+- Lider : Indra
+- Testing : Cristian
+- Ingeniero de Tecnologia : Jorge
