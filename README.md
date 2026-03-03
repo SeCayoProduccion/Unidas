@@ -23,6 +23,6 @@ We seek to implement an interactive map that displays the rate of these crimes b
 -------------------------------------------------------------------------------------------------------------------------------
 
 ## Integrantes
-- Lider : Indra
-- Testing : Cristian
-- Ingeniero de Tecnologia : Jorge
+- Lider : Indra Cortes
+- Testing : Cristian Lopez
+- Ingeniero de Tecnologia : Jorge Bolaños
