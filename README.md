@@ -17,9 +17,71 @@ Unidas Unidas aims to raise awareness and collective memory on issues of physica
 
 We seek to implement an interactive map that displays the rate of these crimes by state. Additionally, we believe they should not be treated merely as data and statistics; we want their stories to be told and not forgotten, without revictimizing them. Finally, we will attempt to identify the risk factors in different areas.
 
+-------------------------------------------------------------------------------------------------------------------------------
 
+## Consulta
 
+**Español:**  
+Para obtener el número de desapariciones de mujeres por entidad federativa (excluyendo registros sin fecha de desaparición), utilizamos una consulta SQL sobre la base de datos `desaparecidos.db`. El script en Python es el siguiente:
 
+```python
+import sqlite3
+import pandas as pd
+
+conn = sqlite3.connect("desaparecidos.db")
+
+query = """
+SELECT entidad_desaparicion, COUNT(*) as total
+FROM casos
+WHERE fecha_desaparicion IS NOT NULL
+AND sexo = 'MUJER'
+GROUP BY entidad_desaparicion
+"""
+
+df_combo = pd.read_sql(query, conn)
+print(df_combo)
+
+conn.close()
+
+```
+en el que se obtiene 
+
+``` entidad_desaparicion  total
+0        AGUASCALIENTES     28
+1       BAJA CALIFORNIA    137
+2   BAJA CALIFORNIA SUR     20
+3              CAMPECHE      3
+4               CHIAPAS     64
+5             CHIHUAHUA    118
+6      CIUDAD DE MEXICO    375
+7              COAHUILA    214
+8                COLIMA     64
+9               DURANGO     23
+10     ESTADO DE MEXICO   1254
+11           GUANAJUATO     76
+12             GUERRERO    199
+13              HIDALGO     50
+14              JALISCO    178
+15           MICHOACAN     280
+16              MORELOS    129
+17              NAYARIT     19
+18           NUEVO LEON    381
+19               OAXACA     21
+20               PUEBLA     31
+21           QUERETARO      23
+22         QUINTANA ROO     56
+23      SAN LUIS POTOSI     33
+24         SE DESCONOCE     23
+25              SINALOA    106
+26               SONORA    242
+27              TABASCO     21
+28           TAMAULIPAS    985
+29             TLAXCALA      5
+30            VERACRUZ     334
+31              YUCATAN      5
+32            ZACATECAS    145
+
+```
 -------------------------------------------------------------------------------------------------------------------------------
 
 ## Integrantes
