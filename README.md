@@ -21,7 +21,6 @@ We seek to implement an interactive map that displays the rate of these crimes b
 
 ## Consulta
 
-**Español:**  
 Para obtener el número de desapariciones de mujeres por entidad federativa (excluyendo registros sin fecha de desaparición), utilizamos una consulta SQL sobre la base de datos `desaparecidos.db`. El script en Python es el siguiente:
 
 ```python
