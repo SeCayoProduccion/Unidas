@@ -24,23 +24,13 @@ We seek to implement an interactive map that displays the rate of these crimes b
 Para obtener el número de desapariciones de mujeres por entidad federativa (excluyendo registros sin fecha de desaparición), utilizamos una consulta SQL sobre la base de datos `desaparecidos.db`. El script en Python es el siguiente:
 
 ```python
-import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect("desaparecidos.db")
+df = pd.read_csv("./RNPDNO-22-08-2023-limpio.csv", encoding="latin-1")
 
-query = """
-SELECT entidad_desaparicion, COUNT(*) as total
-FROM casos
-WHERE fecha_desaparicion IS NOT NULL
-AND sexo = 'MUJER'
-GROUP BY entidad_desaparicion
-"""
+consulta = df[df["Sexo"] == "MUJER"].groupby("Entidad de desaparición").size()
 
-df_combo = pd.read_sql(query, conn)
-print(df_combo)
-
-conn.close()
+print(consulta)
 
 ```
 en el que se obtiene 
