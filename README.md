@@ -3,6 +3,8 @@
 Unidas busca crear difusión y memoria colectiva acerca de desapariciones en México.
 
 Buscamos implementar un servicio que permita identificar el riesgo de ser víctima según tu edad, localización y género. Además, se mostrará la información con un mapa interactivo
+
+La información fue recopilada de https://volveradesaparecer.datacivica.org/datos-abiertos
 -------------------------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------
