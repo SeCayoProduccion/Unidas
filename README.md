@@ -4,7 +4,7 @@ Unidas aims to spread awareness and build collective memory regarding disappeara
 
 Our goal is to provide a service that helps you identify your risk of becoming a victim based on your age, location, and gender. Furthermore, this data will be showcased through an interactive map.
 
-This information was sourced from https://volveradesaparecer.datacivica.org/datos-abiertos-----------------------------------
+This information was sourced from https://volveradesaparecer.datacivica.org/datos-abiertos
 
 -------------------------------------------------------------------------------------------------------------------------------
 
