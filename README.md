@@ -1,11 +1,10 @@
 # UNIDAS
 
-Unidas busca crear difusión y memoria colectiva acerca de desapariciones en México.
+Unidas aims to spread awareness and build collective memory regarding disappearances in Mexico.
 
-Buscamos implementar un servicio que permita identificar el riesgo de ser víctima según tu edad, localización y género. Además, se mostrará la información con un mapa interactivo
+Our goal is to provide a service that helps you identify your risk of becoming a victim based on your age, location, and gender. Furthermore, this data will be showcased through an interactive map.
 
-La información fue recopilada de https://volveradesaparecer.datacivica.org/datos-abiertos
--------------------------------------------------------------------------------------------------------------------------------
+This information was sourced from https://volveradesaparecer.datacivica.org/datos-abiertos-----------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------
 
