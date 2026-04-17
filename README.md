@@ -1,12 +1,8 @@
 # UNIDAS
 
-
 Unidas busca crear difusión y memoria colectiva acerca de desapariciones en México.
-Buscamos implementar un mapa interactivo donde se pueda observar el índice de estos crímenes por estado.
-Además, consideramos que sus casos no deben ser tratados solo como datos y estadísticas, queremos que sus historias
-sean contadas y recordadas sin caer en la revictimización. 
-Por último, identificaremos los factores de riesgo en diferentes ámbitos.
 
+Buscamos implementar un servicio que permita identificar el riesgo de ser víctima según tu edad, localización y género. Además, se mostrará la información con un mapa interactivo
 -------------------------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------
