@@ -4,6 +4,11 @@ local_settings.py
 .env.*
 *.env
 
+#exclude my settings
+unidx/__pycache__
+unidx/db.sqlite3
+unidx/unidx/settings.py
+
 # Python byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
