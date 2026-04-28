@@ -3,5 +3,6 @@ from django.db import models
 # Create your models here.
 
 class Flux(models.Model):
-    pub_datetime = models.DateTimeField('datetime')
-    flux = models.DecimalField(default=0.0)
+    date_time = models.DateTimeField("date_time", primary_key=True)
+    flux = models.FloatField(default=0.0)
+    name = models.CharField(max_length=128, default="")
