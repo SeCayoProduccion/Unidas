@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from django_countries.fields import CountryField
 
 # Create your models here.
 
