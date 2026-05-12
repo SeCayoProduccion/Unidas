@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from plugin.views import MyUserView # <-- Importamos la vista de tu proyecto
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Creamos la ruta '/riesgo/' y la conectamos con tu vista
+    path('riesgo/', MyUserView, name='calcular_riesgo'), 
 ]
