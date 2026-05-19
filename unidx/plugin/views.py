@@ -17,7 +17,7 @@ def MyUserView(request):
             
             # 2. Abrimos el CSV para buscar la estadística
             # Esta es la lógica que tenías en Consulta.py
-            ruta_csv = os.path.abspath(os.path.join(settings.BASE_DIR, '..', 'RNPDNO-22-08-2023-limpio.csv'))
+            ruta_csv = os.path.abspath(os.path.join(settings.BASE_DIR, 'RNPDNO-22-08-2023-limpio.csv'))
             df = pd.read_csv(ruta_csv, encoding="latin-1")
             
             # Filtramos por el estado que el usuario escribió
