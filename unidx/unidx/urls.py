@@ -21,5 +21,6 @@ from plugin.views import MyUserView # <-- Importamos la vista de tu proyecto
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Creamos la ruta '/riesgo/' y la conectamos con tu vista
-    path('riesgo/', MyUserView, name='calcular_riesgo'), 
+    path('riesgo/', MyUserView, name='calcular_riesgo'),
+    path('', include('core.urls')), # home de la raiz 
 ]
