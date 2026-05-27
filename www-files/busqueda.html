@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIDX BUSQUEDA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="busqueda.css">
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="busqueda.html">Búsqueda</a>
+            <a href="visitantes.html">Visitantes</a>
+        </nav>
+
+        <H1>UNIDX</H1>
+
+        <div class="contenedor">
+
+            <!-- columna izquierdo. Nombre, Edad, estado -->
+            <div class="col-izquierda">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad">
+
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                    <option value="">Selecciona un estado</option>
+                    <option>Aguascalientes</option>
+                    <option>Baja California</option>
+                    <option>Baja California Sur</option>
+                    <option>Campeche</option>
+                    <option>Chiapas</option>
+                    <option>Chihuahua</option>
+                    <option>Ciudad de México</option>
+                    <option>Coahuila</option>
+                    <option>Colima</option>
+                    <option>Durango</option>
+                    <option>Estado de México</option>
+                    <option>Guanajuato</option>
+                    <option>Guerrero</option>
+                    <option>Hidalgo</option>
+                    <option>Jalisco</option>
+                    <option>Michoacán</option>
+                    <option>Morelos</option>
+                    <option>Nayarit</option>
+                    <option>Nuevo León</option>
+                    <option>Oaxaca</option>
+                    <option>Puebla</option>
+                    <option>Querétaro</option>
+                    <option>Quintana Roo</option>
+                    <option>San Luis Potosí</option>
+                    <option>Sinaloa</option>
+                    <option>Sonora</option>
+                    <option>Tabasco</option>
+                    <option>Tamaulipas</option>
+                    <option>Tlaxcala</option>
+                    <option>Veracruz</option>
+                    <option>Yucatán</option>
+                    <option>Zacatecas</option>
+                </select>
+            </div>
+
+            <!-- coluna derecha. Género radio button -->
+            <div class="col-derecha">
+                <div class="genero-grupo">
+                    <span class="label-genero">Género:</span>
+                    <div class="toggles">
+                        <div class="toggle-item">
+                            <label class="toggle-switch">
+                                <input type="radio" name="genero" value="femenino">
+                                <span class="slider"></span>
+                            </label>
+                            Femenino
+                        </div>
+                        <div class="toggle-item">
+                            <label class="toggle-switch">
+                                <input type="radio" name="genero" value="masculino">
+                                <span class="slider"></span>
+                            </label>
+                            Masculino
+                        </div>
+                    </div>
+                </div>
+
+                <a href="negocio.html">
+                    <button>Buscar</button>
+                </a>
+                
+            </div>
+
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>Cómputo disfribuido en la nube</p>
+        
+    </footer>
+</body>
+</html>
