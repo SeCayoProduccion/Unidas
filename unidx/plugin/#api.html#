@@ -2,15 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>unidx</title>
+    <title>Unidas - Riesgo de Desaparición</title>
 </head>
 <body style="font-family: Arial, sans-serif; padding: 20px;">
-    <h1>unidx</h1>
+    <h1>Pro 💜</h1>
     <p>Ingresa tus datos para buscar las estadísticas en nuestra base de datos.</p>
 
     <form method="post">
         {% csrf_token %} {{ form.as_p }}  <button type="submit" style="padding: 10px; background-color: purple; color: white;">
-            buscar
+            Buscar y Calcular Riesgo
         </button>
     </form>
 </body>
