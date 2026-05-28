@@ -23,8 +23,10 @@
             <ul style="list-style: none; padding: 0;">
                 {% for visita in historial %}
                     <li style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'DM Sans', sans-serif;">
-                        El usuario <strong>{{ visita.nombre }}</strong> realizó una búsqueda el 
-                        <span>{{ visita.fecha|date:"d \d\e F \d\e Y" }}</span> a las <span>{{ visita.fecha|time:"H:i" }}</span>
+                        <!-- quité lo del nombre porque el modelo ya no lo usa -->
+                        Búsqueda: <strong>{{ visita.estado }}</strong> — {{ visita.sexo }} — Edad: {{ visita.edad|default:"no especificada" }}
+                        <br><span>{{ visita.fecha|date:"d \d\e F \d\e Y" }}</span> a las <span>{{ visita.hora|time:"H:i" }}</span>
+
                     </li>
                 {% empty %}
                     <li style="padding: 12px; font-family: 'DM Sans', sans-serif; opacity: 0.7;">
