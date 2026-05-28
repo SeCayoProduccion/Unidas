@@ -13,7 +13,7 @@ NC='\033[0m' # Sin color (reiniciar)
 clear
 
 # ==========================================
-# Título Gigante
+# Título Gigante (ASCII Art)
 # ==========================================
 echo -e "${C_MORADO}"
 echo "██╗   ██╗███╗   ██╗██╗██████╗  █████╗ ███████╗"
@@ -30,7 +30,7 @@ echo -e "${C_CYAN}======================================================${NC}"
 echo ""
 
 # ==========================================
-# Integrantes del equipo (Extraídos del README)
+# Integrantes del equipo
 # ==========================================
 echo -e "${C_AMARILLO}👥 INTEGRANTES DEL EQUIPO:${NC}"
 echo ""
@@ -55,21 +55,26 @@ if [ ! -d "venv" ]; then
     source venv/bin/activate
     pip install -r requirements.txt
     echo ""
-    echo -e "   ${C_VERDE}✔️  ¡Instalación completada exitosamente!${NC}"
+    echo -e "   ${C_VERDE}txt ✔️  ¡Instalación completada exitosamente!${NC}"
 else
     echo -e "   ${C_VERDE}✔️  Entorno virtual detectado y activado.${NC}"
     source venv/bin/activate
 fi
 
 echo ""
-echo ""
 
 # ==========================================
-# Ejecución del Servidor
+# Ejecución del Servidor y Migraciones
 # ==========================================
 echo -e "${C_CYAN}======================================================${NC}"
 echo -e "${C_VERDE}🚀 INICIANDO SERVIDOR WEB EN DJANGO...${NC}"
 echo -e "${C_CYAN}======================================================${NC}"
 echo ""
 
+# Ejecuta las migraciones automáticamente antes de abrir el servidor
+echo -e "   ${C_BLANCO}[+] Aplicando cambios y migraciones pendientes en la Base de Datos...${NC}"
+python unidx/manage.py migrate
+echo ""
+
+# Enciende el servidor de desarrollo
 python unidx/manage.py runserver
