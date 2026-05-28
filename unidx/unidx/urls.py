@@ -15,12 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from plugin.views import MyUserView # <-- Importamos la vista de tu proyecto
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Creamos la ruta '/riesgo/' y la conectamos con tu vista
-    path('riesgo/', MyUserView, name='calcular_riesgo'),
-    path('', include('core.urls')), # home de la raiz 
+    path('', include('plugin.urls')), 
 ]

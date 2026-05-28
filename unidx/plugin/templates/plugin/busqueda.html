@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIDX BUSQUEDA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'plugin/busqueda.css' %}">
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'busqueda' %}">Búsqueda</a>
+            <a href="{% url 'visitantes' %}">Visitantes</a>
+        </nav>
+
+        <H1>UNIDX</H1>
+
+        <form class="contenedor" action="{% url 'busqueda' %}" method="POST">
+            {% csrf_token %}
+
+            <div class="col-izquierda">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad">
+
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecciona un estado</option>
+                    <option value="AGUASCALIENTES">Aguascalientes</option>
+                    <option value="BAJA CALIFORNIA">Baja California</option>
+                    <option value="BAJA CALIFORNIA SUR">Baja California Sur</option>
+                    <option value="CAMPECHE">Campeche</option>
+                    <option value="CHIAPAS">Chiapas</option>
+                    <option value="CHIHUAHUA">Chihuahua</option>
+                    <option value="CIUDAD DE MEXICO">Ciudad de México</option>
+                    <option value="COAHUILA">Coahuila</option>
+                    <option value="COLIMA">Colima</option>
+                    <option value="DURANGO">Durango</option>
+                    <option value="ESTADO DE MEXICO">Estado de México</option>
+                    <option value="GUANAJUATO">Guanajuato</option>
+                    <option value="GUERRERO">Guerrero</option>
+                    <option value="HIDALGO">Hidalgo</option>
+                    <option value="JALISCO">Jalisco</option>
+                    <option value="MICHOACAN">Michoacán</option>
+                    <option value="MORELOS">Morelos</option>
+                    <option value="NAYARIT">Nayarit</option>
+                    <option value="NUEVO LEON">Nuevo León</option>
+                    <option value="OAXACA">Oaxaca</option>
+                    <option value="PUEBLA">Puebla</option>
+                    <option value="QUERETARO">Querétaro</option>
+                    <option value="QUINTANA ROO">Quintana Roo</option>
+                    <option value="SAN LUIS POTOSI">San Luis Potosí</option>
+                    <option value="SINALOA">Sinaloa</option>
+                    <option value="SONORA">Sonora</option>
+                    <option value="TABASCO">Tabasco</option>
+                    <option value="TAMAULIPAS">Tamaulipas</option>
+                    <option value="TLAXCALA">Tlaxcala</option>
+                    <option value="VERACRUZ">Veracruz</option>
+                    <option value="YUCATAN">Yucatán</option>
+                    <option value="ZACATECAS">Zacatecas</option>
+                </select>
+            </div>
+
+            <div class="col-derecha">
+                <div class="genero-grupo">
+                    <span class="label-genero">Género:</span>
+                    <div class="toggles">
+                        <div class="toggle-item">
+                            <label class="toggle-switch">
+                                <input type="radio" name="genero" value="femenino" required>
+                                <span class="slider"></span>
+                            </label>
+                            Femenino
+                        </div>
+                        <div class="toggle-item">
+                            <label class="toggle-switch">
+                                <input type="radio" name="genero" value="masculino" required>
+                                <span class="slider"></span>
+                            </label>
+                            Masculino
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit">Buscar</button>
+                
+                {% if busqueda_realizada %}
+                    <div style="margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 8px;">
+                        <p>Hola <strong>{{ nombre }}</strong>,</p>
+                        <p>En <strong>{{ estado }}</strong> hay un registro de <strong>{{ total }}</strong> desapariciones con esas características.</p>
+                    </div>
+                {% endif %}
+            </div>
+
+        </form>
+        
+    </main>
+
+    <footer>
+        <p>Cómputo distribuido en la nube</p>
+    </footer>
+</body>
+</html>
