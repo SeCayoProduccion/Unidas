@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIDX HOMEPAGE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'busqueda' %}">Búsqueda</a>
+            <a href="{% url 'visitantes' %}">Visitantes</a>
+        </nav>
+        <h1>UNIDX</h1>
+        <div class="home-contenido">
+            <p class="home-descripcion">
+                Servicio de conteo de personas desaparecidas en México.
+            </p>
+            <p class="home-descripcion">
+                Consulta por sexo, edad y estado para conocer cuántas
+                personas con esas características han sido reportadas como desaparecidas.
+            </p>
+            <p class="home-descripcion">El nombre solo será guardado dentro del apartado de visita. No forma parte de la búsqueda.</p>
+            <a href="{% url 'busqueda' %}" class="boton-iniciar">Iniciar búsqueda</a>
+        </div>
+    </main>
+    <footer>
+        <p>Cómputo distribuido en la nube</p>
+    </footer>
+</body>
+</html>
+
