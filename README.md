@@ -109,23 +109,45 @@ The project was developed following a sequential pipeline:
 ## IMPLEMENTATION
 ### Project structure
 ```
-- Unidas/
-  - EJECUTAME_PRIMERO.sh # Installs dependencies and starts the server
-  - RNPDNO-22-08-2023-limpio.csv # Cleaned RNPDNO dataset
-  - unidx/
-    - manage.py
-    - db.sqlite3 # SQLite database (visitor records)
-    - plugin/ # Main Django app
-      - models.py # Visitante model
-      - views.py # Query, results and visitor log logic
-      - urls.py
-      - templates/
-        - plugin/
-          - index.html # Home page
-          - busqueda.html # Query form and results
-          - visitantes.html # Visitor log
+Unidas/
+  .gitignore
+  EJECUTAME_PRIMERO.sh # Installs dependencies and starts the server
+  LICENSE
+  README.md
+  requirements.txt
+  sqlite.ipynb # Script used to export data to SQLite
+  imgs/
+    tamaulipas_hombres.png
+    tamaulipas_mujeres.png
+  unidx/
+    manage.py
+    RNPDNO-22-08-2023-limpio.csv # Cleaned RNPDNO dataset
+    core/
+    plugin/ # Main Django app
+      models.py # Visitante model
+      views.py # Query, results and visitor log logic
+      urls.py
+      admin.py
+      apps.py
+      tests.py
+      migrations/
+      static/plugin/
+        busqueda.css
+        index.css
+        negocio.css
+        visitantes.css
+      templates/plugin/
+        index.html # Home page
+        busqueda.html # Query form and results
+        negocio.html
+        visitantes.html # Visitor log
+    unidx/ # Django project settings
+      settings.py
+      urls.py
+      asgi.py
+      wsgi.py
 ```
-          
+
 The setup script `EJECUTAME_PRIMERO.sh` creates the virtual environment, installs dependencies, runs migrations, and starts the development server.
 
 The main view (`busqueda`) receives the user's state, sex, and optionally age via POST request. State and sex are required, age is optional. It reads the CSV with pandas, applies the filters, returns the total count of matching cases, and saves the search parameters and timestamp to the SQLite database.
@@ -138,6 +160,7 @@ The main view (`busqueda`) receives the user's state, sex, and optionally age vi
 | Age optional | Jalisco, Hombre | 3829 | ✓ |
 | Filter by state, sex and age | Michoacán, Mujer, 15 | 64 | ✓ |
 | No results | Oaxaca, Hombre, 99 | 0 | ✓ |
+
 ---
 
 ## RESULTS
