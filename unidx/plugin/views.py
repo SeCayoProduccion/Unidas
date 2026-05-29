@@ -25,7 +25,6 @@ def busqueda(request):
         edad = request.POST.get('edad', '')
         estado = request.POST.get('estado', '').upper()
         genero = request.POST.get('genero', '')
-
         # Aquí se guarda lo que buscó pero sin el nombre
         Visitante.objects.create(
             sexo=genero,
@@ -37,7 +36,7 @@ def busqueda(request):
         # Abrir el CSV
         ruta_csv = os.path.abspath(os.path.join(settings.BASE_DIR, 'RNPDNO-22-08-2023-limpio.csv'))
         df = pd.read_csv(ruta_csv, encoding="latin-1")
-
+        df["Entidad de desaparición"] = df["Entidad de desaparición"].str.strip() # Quita espacios extras
         # Filtrar por estado y genero
         filtro = df[(df["Entidad de desaparición"] == estado) & (df["Sexo"] == sexo_csv)]
         if edad: # Filtra x edad
