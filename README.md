@@ -1,5 +1,6 @@
 # UNIDAS
 A service to count and consult missing persons cases in Mexico, searcheable by age, state and sex.
+![Service preview](imgs/muestra-servicio.png)
 
 ## Table of Contents
 1. [Authors](#authors)
@@ -27,6 +28,7 @@ A service to count and consult missing persons cases in Mexico, searcheable by a
 | Technology lead | Jorge Bolaños | jorgehbr23@gmail.com     |
 
 ## Affiliations
+![UNAM](imgs/logo-unam.png)
 [ENES Morelia, Universidad Nacional Autónoma de México](https://www.enesmorelia.unam.mx/)
 
 ## Licence
