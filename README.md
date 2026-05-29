@@ -28,7 +28,7 @@ A service to count and consult missing persons cases in Mexico, searcheable by a
 | Technology lead | Jorge Bolaños | jorgehbr23@gmail.com     |
 
 ## Affiliations
-![UNAM](imgs/logo-unam.png)
+![UNAM](imgs/logo-unam.jpg)
 [ENES Morelia, Universidad Nacional Autónoma de México](https://www.enesmorelia.unam.mx/)
 
 ## Licence
