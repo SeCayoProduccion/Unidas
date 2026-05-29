@@ -157,8 +157,8 @@ The main view (`busqueda`) receives the user's state, sex, and optionally age vi
 ## TESTS
 | Test case | Input | Expected result | Status |
 |---|---|---|---|
-| State required | No state selectioned | Form does not submit | ✓ |
-| Sex required | No gender selectioned  | Form does not submit | ✓ |
+| State required | No gender selectioned | Form does not submit | ✓ |
+| Sex required | No gendeSin género seleccionado | Form does not submit | ✓ |
 | Age optional | Jalisco, Hombre | 3829 | ✓ |
 | Filter by state, sex and age | Michoacán, Mujer, 15 | 64 | ✓ |
 | No results | Oaxaca, Hombre, 99 | 0 | ✓ |
