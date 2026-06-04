@@ -1,5 +1,5 @@
 from django.db import models
-
+#indraa
 # tabla para guardar que busco cada visitante, no guarda su nombre por privacidad
 class Visitante(models.Model):
     sexo = models.CharField(max_length=20)
